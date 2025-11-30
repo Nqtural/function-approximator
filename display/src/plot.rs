@@ -1,4 +1,5 @@
 use terminal_size::{Width, Height, terminal_size};
+use training::function_to_approximate;
 
 fn map_y(y: f32, height: usize) -> usize {
     let clamped_y = y.clamp(-1.0, 1.0);
@@ -25,7 +26,7 @@ where
     for i in 0..width {
         let x = x_min + (i as f32) * (x_max - x_min) / (width - 1) as f32;
 
-        let real = x.sin();
+        let real = function_to_approximate(x);
         let pred = predict(x);
 
         let real_row = map_y(real, height);

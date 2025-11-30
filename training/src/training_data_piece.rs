@@ -1,6 +1,10 @@
 use rand::{rng, Rng};
 use std::fmt;
 
+pub fn function_to_approximate(x: f32) -> f32 {
+    x.sin()
+}
+
 pub struct TrainingConfig {
     pub x_min: f32,
     pub x_max: f32,
@@ -23,10 +27,9 @@ pub struct TrainingDataPiece {
 impl TrainingDataPiece {
     pub fn new(cfg: &TrainingConfig) -> Self {
         let num = rng().random_range(cfg.x_min..=cfg.x_max);
-
         Self {
             input: num,
-            correct_answer: num.sin(),
+            correct_answer: function_to_approximate(num),
         }
     }
 }

@@ -28,6 +28,7 @@ name = "display"
 version = "0.1.0"
 dependencies = [
  "terminal_size",
+ "training",
 ]
 
 [[package]]
