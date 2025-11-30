@@ -1,6 +1,8 @@
 [workspace]
 members = [
     "app",
-    "trainingdata",
+	"display",
+	"neuralnet",
+    "training",
 ]
 resolver = "3"
