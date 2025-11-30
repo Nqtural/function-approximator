@@ -3,6 +3,11 @@ use std::fmt;
 
 pub fn function_to_approximate(x: f32) -> f32 {
     x.sin()
+    //x.cos()
+    //x
+    //x.abs() - 1.0
+    //(-x * x).exp()
+    //x.sin() + 0.3 * (3.0 * x).sin()
 }
 
 pub struct TrainingConfig {
