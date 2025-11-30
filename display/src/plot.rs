@@ -1,8 +1,9 @@
 use terminal_size::{Width, Height, terminal_size};
 
 fn map_y(y: f32, height: usize) -> usize {
-    let ny = (1.0 - (y + 1.0) / 2.0) * (height as f32 - 1.0);
-    ny as usize
+    let clamped_y = y.clamp(-1.0, 1.0);
+    let ny = (1.0 - (clamped_y + 1.0) / 2.0) * (height as f32 - 1.0);
+    ny.floor() as usize
 }
 
 pub fn plot_sin_and_pred<F>(predict: F, x_min: f32, x_max: f32)
