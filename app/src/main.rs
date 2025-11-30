@@ -21,7 +21,7 @@ fn main() {
         let lr = if epoch < 30000 { 0.0003 } 
                  else if epoch < 45000 { 0.0001 } 
                  else { 0.00003 };
-        let epoch_loss = train_epoch(&mut net, 512, lr, &cfg);
+        let epoch_loss = train_epoch(&mut net, 256, lr, &cfg);
         avg_loss = avg_loss * 0.9 + epoch_loss * 0.1;
 
         if epoch % 500 == 0 {

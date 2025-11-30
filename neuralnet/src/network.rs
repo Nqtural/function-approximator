@@ -12,7 +12,7 @@ pub struct NeuralNet {
 impl NeuralNet {
     pub fn new() -> Self {
         let mut rng = rand::rng();
-        let hidden_size = 16;
+        let hidden_size = 8;
 
         // Xavier init: scale by sqrt(fan_in * fan_out)
         let w1_scale = 1.0 / (1.0f32.sqrt() * hidden_size as f32);

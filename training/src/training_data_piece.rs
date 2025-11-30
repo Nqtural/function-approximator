@@ -9,8 +9,8 @@ pub struct TrainingConfig {
 impl Default for TrainingConfig {
     fn default() -> Self {
         Self {
-            x_min: -(2.0 * std::f32::consts::PI),
-            x_max:  (2.0 * std::f32::consts::PI),
+            x_min: -(1.0 * std::f32::consts::PI),
+            x_max:  (1.0 * std::f32::consts::PI),
         }
     }
 }
